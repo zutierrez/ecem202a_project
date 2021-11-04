@@ -1,6 +1,8 @@
 # ecem202a_project
 This is repository template for UCLA ECEM202A / CSM213A projects.
 
+Website link: https://zutierrez.github.io/ecem202a_project/
+
 Use the folders as follows:
 
 * doc/ for website content
