@@ -22,11 +22,11 @@ What are the challenges and risks?
 
 ## 6. Requirements for Success
 
-What skills and resources are necessary to perform the project?
+Hardware bring-up and debugging skills are necessary to implement the onboard camera system. Furthermore, knowledge of deploying image classification models at the edge is necessary to succesfully implement the projects fundamental functionality. Lastly, resource required for this project include Edge Impulse for deploying DNNs, ArduCAM software documentation and resources for storing images in a cloud service (Microsoft Azure, AWS etc.)
 
 ## 7. Metrics of Success
 
-What are metrics by which you would check for success?
+The team will implement the system with the energy-efficient approach and without the energy-effecient approach. Without knowledge of overlapping FOV between a two-camera system, unnecessary power will be used for classifying and sending redundant images to the cloud service. We will compare power consumption of the system using the two approaches to demonstrate the success of the approach. 
 
 ## 8. Execution Plan
 
