@@ -22,7 +22,7 @@ What are the challenges and risks?
 
 ## 6. Requirements for Success
 
-Hardware bring-up and debugging skills are necessary to implement the onboard camera system. Furthermore, knowledge of deploying image classification models at the edge is necessary to succesfully implement the projects fundamental functionality. Lastly, resource required for this project include Edge Impulse for deploying DNNs, ArduCAM software documentation and resources for storing images in a cloud service (Microsoft Azure, AWS etc.)
+Hardware bring-up and debugging skills are necessary to implement the onboard camera system. Furthermore, the team must have knowledge of image classification models and deployment of these models at the edge to successfully implement the project. Lastly, resources required for this project include Edge Impulse or TF Lite Micro for deploying DNNs, ArduCAM software documentation for camera hardware debugging and  Microsoft Azure/AWS resources for storing images with a cloud service.
 
 ## 7. Metrics of Success
 
@@ -30,13 +30,18 @@ The team will implement the system with the energy-efficient approach and withou
 
 ## 8. Execution Plan
 
-Describe the key tasks in executing your project, and in case of team project describe how will you partition the tasks.
+1. Implement two-camera system with cross-camera communication. (Zion)
+2. Deploy image classification models which run at the edge using TF Lite Micro or Edge Impulse. (Sung Yoon)
+3. Implement code for sending images to bridge device (smartphone or Arduino Nano 33 IoT) to push to cloud service. (Zion)
+4. Develop code for energy-efficient approach which minimizes redundant images sent to the cloud service. (Sung Yoon)
+5. Design approach for computing overlapping FOV and integrate code for energy-efficient image classification and storage. (Zion)
 
 ## 9. Related Work
 
 ### 9.a. Papers
 
 List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
+
 
 ### 9.b. Datasets
 
