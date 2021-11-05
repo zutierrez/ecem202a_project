@@ -56,15 +56,14 @@ The team will implement the system with the energy-efficient approach and withou
 
 ### 9.a. Papers
 
-- ___CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge:___ Cross-camera communication approach for image classification with edge devices.
+- __CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge:__ Cross-camera communication approach for image classification with edge devices.
 - __CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning:__ Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
 - __Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge:__ Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
 
 ### 9.b. Datasets
 
-- ___MPII Human Pose Dataset:___ This dataset includes thousands of frames of humans gathered from YouTube videos.
-- ___Open Images V6 (Google):___ This is another dataset we may use. It contains labeled images of various objects and subjects.
-
+- __MPII Human Pose Dataset:__ This dataset includes thousands of frames of humans gathered from YouTube videos.
+- __Open Images V6 (Google):__ This is another dataset we may use. It contains labeled images of various objects and subjects.
 
 ### 9.c. Software
 
