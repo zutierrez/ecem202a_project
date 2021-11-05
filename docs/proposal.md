@@ -57,7 +57,7 @@ The team will implement the system with the energy-efficient approach and withou
 ### 9.a. Papers
 
 - __CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge:__ Cross-camera communication approach for image classification with edge devices.
-- __CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning:__ Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
+- __CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning:__ Energy-efficient method of minimizing redundant classified images sent to a shared cloud service.
 - __Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge:__ Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
 
 ### 9.b. Datasets
@@ -74,13 +74,13 @@ The team will implement the system with the energy-efficient approach and withou
 ## 10. References
 
 1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5. 
-https://ieeexplore.ieee.org/document/9156251
+_https://ieeexplore.ieee.org/document/9156251_
 2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6. 
-https://ieeexplore.ieee.org/document/8615368
+_https://ieeexplore.ieee.org/document/8615368_
 3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. 
-https://doi.org/10.1145/3356250.3360046
-4. MPII Human Pose Dataset: http://human-pose.mpi-inf.mpg.de/#overview
-5. Open Images V6: https://storage.googleapis.com/openimages/web/index.html
-6. Arduino IDE: https://www.arduino.cc/en/software
-7. Edge Impulse CLI: https://docs.edgeimpulse.com/docs/cli-installation
-8. ArduCAM Repository: https://github.com/ArduCAM/Arduino
+_https://doi.org/10.1145/3356250.3360046_
+4. MPII Human Pose Dataset: _http://human-pose.mpi-inf.mpg.de/#overview_
+5. Open Images V6: _https://storage.googleapis.com/openimages/web/index.html_
+6. Arduino IDE: _https://www.arduino.cc/en/software_
+7. Edge Impulse CLI: _https://docs.edgeimpulse.com/docs/cli-installation_
+8. ArduCAM Repository: _https://github.com/ArduCAM/Arduino_
