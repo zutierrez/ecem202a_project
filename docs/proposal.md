@@ -23,16 +23,17 @@ Our approach is to combine the techniques from the above stated research. To imp
 ## 4. Potential Impact
 
 If our project is successful, it will show that power consumption can be reduced in a network of edge-computing image sensors. Technically, it will prove that multiple techniques of power optimization can be utilized effectively for edge-computing image sensors. By analyzing our results, we will be able to measure the effectiveness of each technique, and find out if the techniques synergize with each other, or if the improvements in power consumption do not stack effectively. 
+
 If our image sensors are able to effectively learn the overlapping FoV, and use it to gradually improve power consumption even more as time goes on, it could show that machine learning on edge-computing devices is effective and practical, and could open doors for more utilization of machine learning on portable devices as a way to optimize power and more.
 
 ## 5. Challenges
 
 There are multiple challenges involved with this project:
-In terms of simply connecting the cameras with the Arduinos, the wired connections must be reliable and short in order to minimize latency and ensure image quality. Also, it 
-In our experiments, we plan to use human subjects to be the objects of interest to be captured by the image sensors. This was decided because humans are one of the only resources that we have control over that can move around the field of vision in a manner that we desire. However, gathering image datasets for human subjects may be difficult, since some image datasets feature only faces, and other datasets may have too much variety in their images.
-As Arduinos are not meant to be power computing devices, they may struggle with handling image classification. We will work with lightweight neural networks to overcome this issue.
-Calculating the power consumption of the image sensors may be slightly inaccurate, since we plan to manually measure the currents and voltages of the devices. 
-Communication, whether it is BLE communication between the Arduinos, BLE communication between the Arduinos and the bridge device, or WiFi communication between the bridge device and the cloud, may present challenges as well. Issues may arise with synchronization, data loss, and speed/throughput bottlenecks.
+- In terms of simply connecting the cameras with the Arduinos, the wired connections must be reliable and short in order to minimize latency and ensure image quality. 
+- In our experiments, we plan to use human subjects to be the objects of interest to be captured by the image sensors. This was decided because humans are one of the only resources that we have control over that can move around the field of vision in a manner that we desire. However, gathering image datasets for human subjects may be difficult, since some image datasets feature only faces, and other datasets may have too much variety in their images.
+- As Arduinos are not meant to be power computing devices, they may struggle with handling image classification. We will work with lightweight neural networks to overcome this issue.
+- Calculating the power consumption of the image sensors may be slightly inaccurate, since we plan to manually measure the currents and voltages of the devices. 
+- Communication, whether it is BLE communication between the Arduinos, BLE communication between the Arduinos and the bridge device, or WiFi communication between the bridge device and the cloud, may present challenges as well. Issues may arise with synchronization, data loss, and speed/throughput bottlenecks.
 
 ## 6. Requirements for Success
 
