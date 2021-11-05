@@ -74,7 +74,7 @@ The team will implement the system with the energy-efficient approach and withou
 ## 10. References
 
 1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5. 
-_https://ieeexplore.ieee.org/document/9156251_
+ [_https://ieeexplore.ieee.org/document/9156251_](https://ieeexplore.ieee.org/document/9156251)
 2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6. 
 _https://ieeexplore.ieee.org/document/8615368_
 3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. 
