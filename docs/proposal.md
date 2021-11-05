@@ -76,11 +76,11 @@ The team will implement the system with the energy-efficient approach and withou
 1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5. 
  [_https://ieeexplore.ieee.org/document/9156251_](https://ieeexplore.ieee.org/document/9156251)
 2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6. 
-_https://ieeexplore.ieee.org/document/8615368_
+[_https://ieeexplore.ieee.org/document/8615368_](https://ieeexplore.ieee.org/document/8615368)
 3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. 
-_https://doi.org/10.1145/3356250.3360046_
-4. MPII Human Pose Dataset: _http://human-pose.mpi-inf.mpg.de/#overview_
-5. Open Images V6: _https://storage.googleapis.com/openimages/web/index.html_
-6. Arduino IDE: _https://www.arduino.cc/en/software_
-7. Edge Impulse CLI: _https://docs.edgeimpulse.com/docs/cli-installation_
-8. ArduCAM Repository: _https://github.com/ArduCAM/Arduino_
+[_https://doi.org/10.1145/3356250.3360046_](https://doi.org/10.1145/3356250.3360046)
+4. MPII Human Pose Dataset: [_http://human-pose.mpi-inf.mpg.de/#overview_](http://human-pose.mpi-inf.mpg.de/#overview)
+5. Open Images V6: [_https://storage.googleapis.com/openimages/web/index.html_](https://storage.googleapis.com/openimages/web/index.html)
+6. Arduino IDE: [_https://www.arduino.cc/en/software_](https://www.arduino.cc/en/software)
+7. Edge Impulse CLI: [_https://docs.edgeimpulse.com/docs/cli-installation_](https://docs.edgeimpulse.com/docs/cli-installation)
+8. ArduCAM Repository: [_https://github.com/ArduCAM/Arduino_](https://github.com/ArduCAM/Arduino)
