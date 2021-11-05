@@ -56,37 +56,30 @@ The team will implement the system with the energy-efficient approach and withou
 
 ### 9.a. Papers
 
-List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
-- CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge: Cross-camera communication approach for image classification with edge devices.
-- CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning: Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
-- Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge: Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
+- ___CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge:___ Cross-camera communication approach for image classification with edge devices.
+- __CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning:__ Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
+- __Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge:__ Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
 
 ### 9.b. Datasets
 
-- MPII Human Pose Dataset: This dataset includes thousands of frames of humans gathered from YouTube videos.
-- Open Images V6 (Google): This is another dataset we may use. It contains labeled images of various objects and subjects.
+- ___MPII Human Pose Dataset:___ This dataset includes thousands of frames of humans gathered from YouTube videos.
+- ___Open Images V6 (Google):___ This is another dataset we may use. It contains labeled images of various objects and subjects.
 
 
 ### 9.c. Software
 
-- Arduino IDE: Developing image/video capture scripts for ArduCAM board.
-- Edge Impulse CLI: Tool for deploying image classification models on Arduino Nano 33 BLE Sense boards.
-- ArduCAM Repository: Open-source code for capturing images using the ArduCAM (OV2640) camera module on edge devices.
+- __Arduino IDE:__ Developing image/video capture scripts for ArduCAM board.
+- __Edge Impulse CLI:__ Tool for deploying image classification models on Arduino Nano 33 BLE Sense boards.
+- __ArduCAM Repository:__ Open-source code for capturing images using the ArduCAM (OV2640) camera module on edge devices.
 
 ## 10. References
 
 1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5. 
-
 https://ieeexplore.ieee.org/document/9156251
-
 2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6. 
-
 https://ieeexplore.ieee.org/document/8615368
-
 3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. 
-
 https://doi.org/10.1145/3356250.3360046
-
 4. MPII Human Pose Dataset: http://human-pose.mpi-inf.mpg.de/#overview
 5. Open Images V6: https://storage.googleapis.com/openimages/web/index.html
 6. Arduino IDE: https://www.arduino.cc/en/software
