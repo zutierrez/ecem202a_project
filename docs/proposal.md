@@ -57,29 +57,32 @@ The team will implement the system with the energy-efficient approach and withou
 ### 9.a. Papers
 
 List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
-1. CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge
-  1. Cross-camera communication approach for image classification with edge devices
-2. CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning
-  1. Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
-3. Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge
-  1. Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
+- CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge
+  - Cross-camera communication approach for image classification with edge devices
+- CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning
+  - Energy-effecient method of minimizing redundant classified images sent to a shared cloud service.
+- Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge
+  - Methods for parallel communication using BLE and Wifi for heterogenous edge devices.
 
 ### 9.b. Datasets
 
-List datasets that you have identified and plan to use. Provide references (with full citation in the References section below).
 - MPII Human Pose Dataset: This dataset includes thousands of frames of humans gathered from YouTube videos.
 - Open Images V6 (Google): This is another dataset we may use. It contains labeled images of various objects and subjects.
 
 
 ### 9.c. Software
 
-List softwate that you have identified and plan to use. Provide references (with full citation in the References section below).
+- Arduino IDE: Developing image/video capture scripts for ArduCAM board.
+- Edge Impulse CLI: Tool for deploying image classification models on Arduino Nano 33 BLE Sense boards.
+- ArduCAM Repository: Open-source code for capturing images using the ArduCAM (OV2640) camera module on edge devices.
 
 ## 10. References
 
-List references correspondign to citations in your text above. For papers please include full citation and URL. For datasets and software include name and URL.
-1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5, doi: 10.1109/PerComWorkshops48775.2020.9156251. https://ieeexplore.ieee.org/document/9156251
-2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6, doi: 10.1109/ATNAC.2018.8615368. https://ieeexplore.ieee.org/document/8615368
-3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. DOI:https://doi.org/10.1145/3356250.3360046
+1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5. https://ieeexplore.ieee.org/document/9156251
+2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6. https://ieeexplore.ieee.org/document/8615368
+3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. https://doi.org/10.1145/3356250.3360046
 4. MPII Human Pose Dataset: http://human-pose.mpi-inf.mpg.de/#overview
 5. Open Images V6: https://storage.googleapis.com/openimages/web/index.html
+6. Arduino IDE: https://www.arduino.cc/en/software
+7. Edge Impulse CLI: https://docs.edgeimpulse.com/docs/cli-installation
+8. ArduCAM Repository: https://github.com/ArduCAM/Arduino
