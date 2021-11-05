@@ -30,11 +30,11 @@ If our image sensors are able to effectively learn the overlapping FoV, and use 
 
 There are multiple challenges involved with this project:
 
-In terms of simply connecting the cameras with the Arduinos, the wired connections must be reliable and short in order to minimize latency and ensure image quality.
-In our experiments, we plan to use human subjects to be the objects of interest to be captured by the image sensors. This was decided because humans are one of the only resources that we have control over that can move around the field of vision in a manner that we desire. However, gathering image datasets for human subjects may be difficult, since some image datasets feature only faces, and other datasets may have too much variety in their images.
-As Arduinos are not meant to be power computing devices, they may struggle with handling image classification. We will work with lightweight neural networks to overcome this issue.
-Calculating the power consumption of the image sensors may be slightly inaccurate, since we plan to manually measure the currents and voltages of the devices.
-Communication, whether it is BLE communication between the Arduinos, BLE communication between the Arduinos and the bridge device, or WiFi communication between the bridge device and the cloud, may present challenges as well. Issues may arise with synchronization, data loss, and speed/throughput bottlenecks.
+- In terms of simply connecting the cameras with the Arduinos, the wired connections must be reliable and short in order to minimize latency and ensure image quality.
+- In our experiments, we plan to use human subjects to be the objects of interest to be captured by the image sensors. This was decided because humans are one of the only resources that we have control over that can move around the field of vision in a manner that we desire. However, gathering image datasets for human subjects may be difficult, since some image datasets feature only faces, and other datasets may have too much variety in their images.
+- As Arduinos are not meant to be power computing devices, they may struggle with handling image classification. We will work with lightweight neural networks to overcome this issue.
+- Calculating the power consumption of the image sensors may be slightly inaccurate, since we plan to manually measure the currents and voltages of the devices.
+- Communication, whether it is BLE communication between the Arduinos, BLE communication between the Arduinos and the bridge device, or WiFi communication between the bridge device and the cloud, may present challenges as well. Issues may arise with synchronization, data loss, and speed/throughput bottlenecks.
 
 ## 6. Requirements for Success
 
@@ -67,6 +67,8 @@ List the key papers that you have identified relating to your project idea, and 
 ### 9.b. Datasets
 
 List datasets that you have identified and plan to use. Provide references (with full citation in the References section below).
+- MPII Human Pose Dataset: This dataset includes thousands of frames of humans gathered from YouTube videos.
+- Open Images V6 (Google): This is another dataset we may use. It contains labeled images of various objects and subjects.
 
 
 ### 9.c. Software
@@ -79,3 +81,5 @@ List references correspondign to citations in your text above. For papers please
 1. H. B. Pasandi and T. Nadeem, "CONVINCE: Collaborative Cross-Camera Video Analytics at the Edge," 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2020, pp. 1-5, doi: 10.1109/PerComWorkshops48775.2020.9156251. https://ieeexplore.ieee.org/document/9156251
 2. J. Lim, J. Seo and Y. Baek, "CamThings: IoT Camera with Energy-Efficient Communication by Edge Computing based on Deep Learning," 2018 28th International Telecommunication Networks and Applications Conference (ITNAC), 2018, pp. 1-6, doi: 10.1109/ATNAC.2018.8615368. https://ieeexplore.ieee.org/document/8615368
 3. Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, and Ting Zhu. 2019. Parallel inclusive communication for connecting heterogeneous IoT devices at the edge. In Proceedings of the 17th Conference on Embedded Networked Sensor Systems (SenSys '19). Association for Computing Machinery, New York, NY, USA, 205–218. DOI:https://doi.org/10.1145/3356250.3360046
+4. MPII Human Pose Dataset: http://human-pose.mpi-inf.mpg.de/#overview
+5. Open Images V6: https://storage.googleapis.com/openimages/web/index.html
