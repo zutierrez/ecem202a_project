@@ -12,6 +12,6 @@ With recent advances in edge computing, networks of IoT devices have become more
 # Project Links (Required Submissions):
 
 * [Proposal](proposal)
-* [Midterm Checkpoint Presentation Slides](https://drive.google.com/file/d/1YN15tTWzlB9PK0z8mMXqqHoRAqHFx1dQ/view?usp=sharing)
+* [Midterm Checkpoint Presentation Slides](https://drive.google.com/file/d/1NG_EpbGneMs1bPng-Vq78oSfO0HGGdVe/view?usp=sharing)
 * [Final Presentation Slides](http://)
 * [Final Report](report)
