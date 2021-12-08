@@ -74,11 +74,11 @@ Training datasets used for this project primarily focus on images of human faces
 1. **Flickr-Faces-HQ Dataset:** Contains images of human faces (children, teens , adults of all ethnicities and background) under various lighting conditions
 2. **Linnaeus 5 Dataset:** Contains images of various types of dogs, birds, flowers, berries, and other miscellaneous objects under various lighting conditions
 
-### image 
+### image (slide 7 dataset image)
 
 **Image Processing:** 128x128 database images were cropped and resized to 96x96 and were also rotated and flipped in random order to improved robustness of MobileNet V1 during test time.
 
-### image 
+### image (slide 7 image processing example)
 
 ## Model Performance and Training
 
@@ -119,22 +119,22 @@ Because our system was not capable of completing the entire process flow of taki
 The 4 cases are as follows:
 
 **Case 0**: Bare Minimum Arduino Program
-    * The Arduino was reset using the physical reset button, which represented a totally empty program. Once reset, we measured the current draw of the device, which was around 9 mA. 
-    * We also tried the “Blink” program, which is provided as an example program from the official Arduino documentation. This program simply blinks an onboard LED on and off at a set interval. With this program, the current draw was 17.38 mA when the LED was off and 19.88 mA when the LED was on. We also tried plugging the Arduino into the computer via USB cable to find the current draw when both the power supply & the computer supply were connected to the device. We found that the current draw was 17.36 mA when the LED was on and 19.83 mA when the LED was off. So, we concluded that the contribution of the USB power source was negligible (<0.1 mA).
+* The Arduino was reset using the physical reset button, which represented a totally empty program. Once reset, we measured the current draw of the device, which was around 9 mA. 
+* We also tried the “Blink” program, which is provided as an example program from the official Arduino documentation. This program simply blinks an onboard LED on and off at a set interval. With this program, the current draw was 17.38 mA when the LED was off and 19.88 mA when the LED was on. We also tried plugging the Arduino into the computer via USB cable to find the current draw when both the power supply & the computer supply were connected to the device. We found that the current draw was 17.36 mA when the LED was on and 19.83 mA when the LED was off. So, we concluded that the contribution of the USB power source was negligible (<0.1 mA).
 
 **Case 1**: Image Classification Model Program
-    * The Arduino was loaded with the image classification program from Edge Impulse. The image classification program can be described with the following flow: Take photo, inference (classify) the label, and delay for 2 seconds. By monitoring the multimeter, we found that the current draw for each of these stages was 26.8mA, 27.8mA, and 24.3mA, respectively. The first 2 stages took around 2 seconds combined.
-    * <img width="960" alt="Screen Shot 2021-12-08 at 1 45 36 AM" src="https://user-images.githubusercontent.com/6758294/145186359-9df3f4b3-ef51-4e6c-ae54-b17110dc3d15.png">
-    * We also used the “Average” function of the multimeter, which averages the most recent 8 measurements. For further clarification, 2-4 measurements are taken each second by the multimeter. We found that the average current consumption of the device with the image classification program was around 26 mA.
-    * We took the same current measurements with the USB power not into the Arduino, and found that the average current draw was decreased by around 0.2 mA - again, we considered this amount to be negligible, since it was less than 1% of the average current draw.
+* The Arduino was loaded with the image classification program from Edge Impulse. The image classification program can be described with the following flow: Take photo, inference (classify) the label, and delay for 2 seconds. By monitoring the multimeter, we found that the current draw for each of these stages was 26.8mA, 27.8mA, and 24.3mA, respectively. The first 2 stages took around 2 seconds combined.
+* <img width="960" alt="Screen Shot 2021-12-08 at 1 45 36 AM" src="https://user-images.githubusercontent.com/6758294/145186359-9df3f4b3-ef51-4e6c-ae54-b17110dc3d15.png">
+* We also used the “Average” function of the multimeter, which averages the most recent 8 measurements. For further clarification, 2-4 measurements are taken each second by the multimeter. We found that the average current consumption of the device with the image classification program was around 26 mA.
+* We took the same current measurements with the USB power not into the Arduino, and found that the average current draw was decreased by around 0.2 mA - again, we considered this amount to be negligible, since it was less than 1% of the average current draw.
     
 **Case 2**: Classification + BLE Communication Program
-    * In this program, the Arduino searches for a peripheral device to connect to over Bluetooth, and only classifies images once it has found and connected to another device. The general flow is as follows: searching for a peripheral device, connect, delay, take photo & inference, disconnect. The cycle then repeats. The instantaneous current draw of the device for each of these stages was 13.3 mA, 10.3 mA, 28-29 mA, 31-32 mA, and 20-21 mA, respectively. 
-    * <img width="893" alt="Screen Shot 2021-12-08 at 1 44 32 AM" src="https://user-images.githubusercontent.com/6758294/145186452-b0918fc0-9a3f-478f-9728-c5a83dcf814e.png">
-    * We found the average current of the device in two separate conditions. When the device was not connected, the average current was 13.3 mA. When the device was connected, the average current was 28 mA.
+* In this program, the Arduino searches for a peripheral device to connect to over Bluetooth, and only classifies images once it has found and connected to another device. The general flow is as follows: searching for a peripheral device, connect, delay, take photo & inference, disconnect. The cycle then repeats. The instantaneous current draw of the device for each of these stages was 13.3 mA, 10.3 mA, 28-29 mA, 31-32 mA, and 20-21 mA, respectively. 
+* <img width="893" alt="Screen Shot 2021-12-08 at 1 44 32 AM" src="https://user-images.githubusercontent.com/6758294/145186452-b0918fc0-9a3f-478f-9728-c5a83dcf814e.png">
+* We found the average current of the device in two separate conditions. When the device was not connected, the average current was 13.3 mA. When the device was connected, the average current was 28 mA.
 
 **Case 3**: Images Transmission from Arduino to WiFi Device Program
-    * In this case, we measured the current consumption of the device when it transmitted the binary data of an image to the computer. We found that the idle, taking photo, and transmitting photo currents were around 25 mA, 29 mA and 27 mA, respectively. 
+* In this case, we measured the current consumption of the device when it transmitted the binary data of an image to the computer. We found that the idle, taking photo, and transmitting photo currents were around 25 mA, 29 mA and 27 mA, respectively. 
 
 
 | Case | Task                 | Average Current | Min Current | Max Current |
@@ -169,21 +169,6 @@ From the data that we collected, we were able to make some conclusions:
     * We found that image classification and image transmission had similar amounts of current draw, with only a difference of about 1 mA. In general, most of the operations of the program had current consumption in the high 20s of mA, with the exception of when the device was looking for another device to connect to via Bluetooth, where it only used about 10 mA. Surprisingly, even the delay state of the Arduino consumed current around 26 mA, even while intensive processes were not being executed.
 * Taking photos/inferencing results in highest current spike (31-32 mA)
     * Perhaps not surprisingly, the highest current that we measured was during the “taking photos/inferencing” stage in Case 2. It makes sense that the highest power consumption would be during a processor-intensive operation such as taking a photo and classifying the image based on a machine learning model, as there are many calculations to be completed.
-
-Challenges:
-* Limitations of Arduino Nano
-    * Low memory - we had to use an extremely lightweight version of the machine learning model. This may have caused some erratic behavior during execution of the program, such as random disconnections between the two Arduino devices.
-    * Low processing power - along with classification speed, the device was slow to take photos and transmit them to the computer.
-Compiling speed - since we had large file uploads, each compile took several minutes, sometimes requiring restarting the Arduino client.
-* Limitations of camera sensors
-    * Poor support - we initially used the OV2640 camera sensor, which had a reasonable resolution. However, we found that there was limited support for this camera sensor in conjunction with the Arduino Nano 33 BLE. Most of the time, the Arduino would struggle to transmit an image to a computer connected serially through USB. The transmission rate was inconsistent, and quite slow in general (around 1 image every 3-4 seconds). We suspected that it might be an issue with wiring and loose connections, but even after soldering the pins to the Arduino, the issues remained.
-        * We eventually pivoted to using the OV7670 camera sensor. Although this sensor performed slightly better than the OV 2640 sensor, it was still unreliable. Often, after a few rounds of good images, the camera would begin to send corrupted photos, either with misaligned pixels, or sometimes completely unrecognizable photos. Other times, the photos would be too blurry to make out any objects. 
-        * ![jumbledphoto](https://user-images.githubusercontent.com/6758294/145184748-f512fc88-373e-4f3c-923e-f81790f7df4a.png)
-
-
-* Bluetooth issues
-    * Unprompted disconnection - We were able to connect the Arduinos to each other via Bluetooth, but they often would disconnect for no apparent reason.
-    * Low throughput - with BLE 5, we were not able to send full image data in one transmission, which meant the image had to be split up into packets. Because of this, we ultimately made the decision to pivot from using a Raspberry Pi as the designated WiFi device to upload to the cloud to connecting the Arduinos to a computer via USB connection. We attempted to concatenate the binary bytes into a single file and convert the resulting binary file into a recognizable image, but the image was still too noisy to be able to make out any objects. 
 
 ## Future Steps
 * Develop overlapping field-of-view algorithm
