@@ -62,8 +62,8 @@ While the first method proved to be effective in reducing the power consumption 
 | 3    |  Image Transmission  |      27 mA      |     N/A     |     N/A     |
 
 
-    * In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
-    * In summary, we found that the current consumption of the Arduino varied with different loads and different stages in the programs. The highest current was found when the Arduino was executing the Classification + BT program, specifically in the “taking photo” stage at 31-32 mA. 
+      * In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
+* In summary, we found that the current consumption of the Arduino varied with different loads and different stages in the programs. The highest current was found when the Arduino was executing the Classification + BT program, specifically in the “taking photo” stage at 31-32 mA. 
 We also found that the current contamination of the USB connection from the computer was negligible, at less than 1% of the total average current consumption in all cases. 
 
 
@@ -78,7 +78,7 @@ From the data that we collected, we were able to make some conclusions:
             * This is using data from Case 2, which had the most consistent readings. We also found from Case 3 that using BLE increased power consumption by about 2 mA, so this was also accounted for in this calculation. 
         * The energy consumed while transmitting an image (29 mA) is only 3 mA more than when the system is in its delay state (26 mA).
         * The image transmission time is 320 ms, so the energy saved is 0.32 s * 3 mA = 0.96 mAh saved per frame.
-        * This is 0.96/129.18 = 0.00743, or 0.74% energy conservation.
+        * This is 0.96/129.18 = 0.00743, or **0.74% energy conservation**.
 * Bluetooth communication increased power consumption slightly.
     * In Case 3, we found that the average power consumption of the device with Bluetooth was increased by around 2 mA compared to the device without Bluetooth. We found that power consumption increased throughout the entire duration of the program uniformly. This is due to the fact that when Bluetooth is used with the central device, it is constantly advertising values of the “eventImageCharacteristic” so that the peripheral device can receive it. For this reason, using Bluetooth increased the power consumption of the device.
 * Image classification & image transmission have similar power consumption (27-28 mA)
