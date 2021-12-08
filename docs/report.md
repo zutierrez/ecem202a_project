@@ -47,7 +47,7 @@ We decided to use an input voltage of 7.5V. This was because we needed to ensure
 Because our system was not capable of completing the entire process flow of taking an image, classifying it, communicating with the other device to check for redundant labels, and sending it to the computer, we decided to break up the steps into 4 cases and deduce the power consumption of each stage separately. Then, we could extrapolate our results to infer the power consumption optimizations that would be caused by our system improvements.
 
 The 4 cases were as follows:
-* **Case 0**: Empty Arduino program:
+* **Case 0**: Empty Arduino program
     * The Arduino was reset using the physical reset button, which represented a totally empty program. Once reset, we measured the current draw of the device, which was around 9 mA. 
     * We also tried the “Blink” program, which is provided as an example program from the official Arduino documentation. This program simply blinks an onboard LED on and off at a set interval. With this program, the current draw was 17.38 mA when the LED was off and 19.88 mA when the LED was on. We also tried plugging the Arduino into the computer via USB cable to find the current draw when both the power supply & the computer supply were connected to the device. We found that the current draw was 17.36 mA when the LED was on and 19.83 mA when the LED was off. So, we concluded that the contribution of the USB power source was negligible (<0.1 mA).
 * **Case 1**: Image Classification program
@@ -73,6 +73,7 @@ The 4 cases were as follows:
 
 
 In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
+
 In summary, we found that the current consumption of the Arduino varied with different loads and different stages in the programs. The highest current was found when the Arduino was executing the Classification + BT program, specifically in the “taking photo” stage at 31-32 mA. 
 We also found that the current contamination of the USB connection from the computer was negligible, at less than 1% of the total average current consumption in all cases. 
 
