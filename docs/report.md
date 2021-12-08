@@ -158,12 +158,12 @@ From the data that we collected, we were able to make some conclusions:
     * The image transmission portion of the program required around the same amount of current as the image classification portion of the program (27 mA compared to 28 mA). The image taking portion of the program took around 1 s, while the classification portion took around 330 ms. 
     * Practical application:
         * Let’s say the region of overlap in the camera’s perspectives is 50%, and the number of captured frames that have a redundant subject is also 50%. It takes ~ 2 seconds to capture each frame, ~330 ms for classification/inferencing, ~320 ms for image transmission, and then a 2 second delay between each capture in order to lower the capture frequency. Other time durations (such as bluetooth label communication) are negligible. Then, the total time for each frame capture and processing is ~4.65 seconds. Now, we can estimate the energy consumed in a single frame. 
-        * Energy consumed = energy(photo) + energy(inference) + energy(transmission) + energy(delay)
-        * Energy consumed = (2/3600) hours * 29 mA + (0.33/3600 hours) * 30 mA + (0.32/3600) seconds * 29 mA + (2/3600 hours) * 26 mA = 35.9 mAh
-            * This is using data from Case 2, which had the most consistent readings. We also found from Case 3 that using BLE increased power consumption by about 2 mA, so this was also accounted for in this calculation. 
+        	* Energy consumed = energy(photo) + energy(inference) + energy(transmission) + energy(delay)
+        	* Energy consumed = (2/3600) hours * 29 mA + (0.33/3600 hours) * 30 mA + (0.32/3600) seconds * 29 mA + (2/3600 hours) * 26 mA = 35.9 mAh
+            		* This is using data from Case 2, which had the most consistent readings. We also found from Case 3 that using BLE increased power consumption by about 2 mA, so this was also accounted for in this calculation. 
         * The energy consumed while transmitting an image (29 mA) is only 3 mA more than when the system is in its delay state (26 mA).
-        * The image transmission time is 320 ms, so the energy saved is (0.32/3600) hours * 3 mA = 0.267 mAh saved per frame.
-        * This is 1.98/267 = 0.0074, or **0.74% energy conservation**.
+        	* The image transmission time is 320 ms, so the energy saved is (0.32/3600) hours * 3 mA = 0.267 mAh saved per frame.
+        	* This is 1.98/267 = 0.0074, or **0.74% energy conservation**.
 * Reducing image transmissions by eliminating redundancies does not yield significant energy savings such that it compensates for power consumption of BLE communication.
     * In Case 3, we found that the average power consumption of the device with Bluetooth was increased by around 2 mA compared to the device without Bluetooth. We found that power consumption increased throughout the entire duration of the program uniformly. This is due to the fact that when Bluetooth is used with the central device, it is constantly advertising values of the “eventImageCharacteristic” so that the peripheral device can receive it. For this reason, using Bluetooth increased the power consumption of the device.
     * The power consumption of Bluetooth can be estimated as follows:
