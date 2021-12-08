@@ -36,9 +36,13 @@ While the first method proved to be effective in reducing the power consumption 
 Power consumption:
 To measure power consumption, we used the following tools: RIGOL DS1102E oscilloscope, HP974A multimeter, and a TENMA 72-6628 power supply.
 The power supply was set to around 7.5V (measured voltage of 7.44V with 120-160 mV peak-to-peak), and was connected to the input voltage pin of the Arduino Nano. The oscilloscope was set to 1V/div and time scale of 1ms/div throughout each of the cases to ensure consistency in measurements. 
-We initially attempted to measure the current by using a small sense resistor and measuring the voltage across the resistor differentially. However, the oscilloscope was not able to provide accurate readings at values on the order of mV, so we decided to use a multimeter instead. Unfortunately, since we were not able to 
+
+We initially attempted to measure the current by using a small sense resistor and measuring the voltage across the resistor differentially. However, the oscilloscope was not able to provide accurate readings at values on the order of mV, so we decided to use a multimeter instead. Unfortunately, since we were not able to use the scope to measure current, we were not able to obtain graphs of the current over time.
+
 We decided to use an input voltage of 7.5V. This was because we needed to ensure that the input power from the USB would be ignored. The Arduino Nano 33 BLE features a Schottky diode that feeds USB power to the Vin pin of the microcontroller. By introducing a larger voltage supply to the Vin pin, the diode is reverse-biased, and the USB power is essentially ignored by the system. By preventing USB current from entering and exiting the Arduino from the computer, we were able to constrain the current through the device to one path - from the power supply and through our multimeter. Thus, our current measurements using the multimeter were made as accurate as possible, while retaining the ability to read messages from the Arduino via the Serial monitor on the computer.
+
 Because our system was not capable of completing the entire process flow of taking an image, classifying it, communicating with the other device to check for redundant labels, and sending it to the computer, we decided to break up the steps into 4 cases and deduce the power consumption of each stage separately. Then, we could extrapolate our results to infer the power consumption optimizations that would be caused by our system improvements.
+
 The 4 cases were as follows:
 * **Case 0**: Empty Arduino program:
       * The Arduino was reset using the physical reset button, which represented a totally empty program. Once reset, we measured the current draw of the device, which was around 9 mA. 
