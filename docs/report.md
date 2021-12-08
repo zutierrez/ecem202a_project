@@ -59,7 +59,7 @@ Our approach is to leverage the energy-efficient event camera computing approach
 * ArduCam OV7670 0.3 MP Camera Module (Low-Quality Image Sensor) x2
 * WiFi Connected Device
 
-### image (slide 9 hardware diagram)
+### ![slide9](https://user-images.githubusercontent.com/6758294/145257958-984c47fc-1409-4245-af2d-39d1b08d2592.PNG)
 
 ## Software Implementation 
 By order of execution in implementation:
@@ -76,11 +76,12 @@ Training datasets used for this project primarily focus on images of human faces
 1. **Flickr-Faces-HQ Dataset:** Contains images of human faces (children, teens , adults of all ethnicities and background) under various lighting conditions
 2. **Linnaeus 5 Dataset:** Contains images of various types of dogs, birds, flowers, berries, and other miscellaneous objects under various lighting conditions
 
-### image (slide 7 dataset image)
+### ![slide7ds](https://user-images.githubusercontent.com/6758294/145258243-145ab68a-295d-4de9-9d2a-5a98425728f7.PNG)
+
 
 **Image Processing:** 128x128 database images were cropped and resized to 96x96 and were also rotated and flipped in random order to improved robustness of MobileNet V1 during test time.
 
-### image (slide 7 image processing example)
+### ![slide7ip](https://user-images.githubusercontent.com/6758294/145258080-6d904dde-617f-4167-b1b5-d10743e7fa46.PNG)
 
 ## Model Performance and Training
 
