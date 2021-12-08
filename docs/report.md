@@ -159,7 +159,7 @@ We found that reducing image transmissions by eliminating redundancies does not 
 * The image taking portion of the program took around 2 seconds, classification/inferencing took around 330 ms, image transmission took around 320 ms, and each frame had a 2 second delay to lower capture frequency. Other time durations (such as bluetooth label communication) were negligible.
 * Say the region of overlap in the camera’s perspectives is 50%, and the number of captured frames that have a redundant subject is also 50%. Then, the total time for each frame capture and processing is ~4.65 seconds (2+0.330+0.32+2). Now, we can estimate the total energy consumed in a single frame. 
 	* Total energy consumed = energy(photo) + energy(inference) + energy(transmission) + energy(delay)
-	* Total energy consumed = (2/3600 hours)* (27+2 mA) + (0.33/3600 hours)* (28+2 mA) + (0.32/3600 hours) * (27+2 mA) + (2/3600 hours) * (24+2 mA) = 35.9 mAh
+	* Total energy consumed = (2/3600 hours) * (27+2 mA) + (0.33/3600 hours) * (28+2 mA) + (0.32/3600 hours) * (27+2 mA) + (2/3600 hours) * (24+2 mA) = 35.9 mAh
 		* This is calculated using data from Case 1, which had the most consistent readings. Taking an image took 27 mA, image classification took 28 mA. Then, in Case 2, we found that BLE increased power consumption by about 2 mA, so this was also accounted for by adding to each current. 
 * The energy consumed while transmitting an image (29 mA) is only 3 mA more than when the system is in its delay state (26 mA).
 	* The image transmission time is 320 ms, so the energy saved is (0.32/3600 hours) * 3 mA = 0.267 mAh saved per frame.
