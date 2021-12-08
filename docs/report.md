@@ -66,7 +66,7 @@ By order of execution in implementation:
 * **Model Inference:** Image Classification model deployed on Arduino 33 BLE Sense devices generate inferences on input 96x96 preprocessed image buffers and continues with knowledge sharing on established BLE connection
 * **Image Transmission:** Labels are compared to reduce transmission of redundant images. Preprocessed images are transmitted to a shared WiFi connected device and redundant images are not sent by both devices. 
 
-## Image Collection and Model Testing:
+## Image Collection and Model Testing
 
 Training datasets used for this project primarily focus on images of human faces as the subject of interest. Only event images of interest are transmitted to the shared WiFi connected device. Faces are the primary focus in terms of the data collected from the dataset rather than full body images of humans in various scenarios. Although this subject of interest could have been made to be more practical, the provided data set achieves its purpose and serves as a baseline for further iterations. Since the primary metric for success of the project is power consumption rather than model accuracy, model performance is presented as means of demonstrating validity and viability of MobileNet V1 deployed on the Arduino Nano 33 BLE Sense in conjunction with BLE connectivity.  
 
@@ -80,7 +80,7 @@ Training datasets used for this project primarily focus on images of human faces
 
 ### image 
 
-## Model Performance and Training:
+## Model Performance and Training
 
 **MobileNet V1 0.1:** 53.2K RAM and 101K ROM (default settings and optimizations) 
 87% accuracy on test set, 20 training cycles, 1,000 human samples, 1,000 unknown → Transfer Learning 
@@ -90,20 +90,20 @@ Training datasets used for this project primarily focus on images of human faces
 * Low Compute: Runs on Arduino Nano 33 BLE Sense with 256KB (nRF52840)
 * Compatibility with Arduino Nano: lightweight library for edge device
 
-## Cross-Camera Communication:
+## Cross-Camera Communication
 BLE Central device is programmed to execute an inference on image captured in real-time. The classified label (integer value) is then advertised via a shared event image characteristic which is then read by the peripheral device. This cross-camera communication prevents redundant transmissions to WiFi connected device thus contributing to energy savings.
 
 
 # 4. Evaluation and Results
 
-## Model Performance Overview: 
+## Model Performance Overview
 	
 The model which was deployed on the 2 Arduino Nano 33 BLE Sense boards was the MobileNet V1 0.1 model which is designed for executing image classification and image processing task for microcontroller architecture with 53.2Kb RAM and 101K RAM. For training setups, the model was given images of faces (babies, teens, adults etc.) from the Flickr Faces HQ database and images of other objects from the Linneas 5 database. The MobileNet V1 TF Lite model performed with 87% accuracy after training on about 1,000 pre-labeled person images and 1,000 pre-labeled unknown objects. The model’s performance was evaluated against a test set of about 200 unknown and person images. Furthermore, upon deployment of the model on the Arduino Nano 33 BLE Sense board, the model was found to successfully make inferences on the Arduino Nano 33 BLE Sense using the OV7670 camera module to capture images. 
 
 Evaluation found that the onboard digital signal processing executed in approximately 0.18 ms when deployed on hardware. Further evaluation found that the model running onboard executed the inference task using the MobileNet V1 TF Lite model in 0.520 ms on average. Given that the MobileNet V1 model performed with 87% accuracy, it is valid for image classification at the edge and was further used in the evaluation of power consumption for the multi-camera system of this project. Despite the lower performance relative to MobileNet V2, the model deployed for this project was necessary to allow memory resources to be reallocated to image transmission and BLE communication tasks in real-time. Sumary of the model performance is as follows: 51 ms inference time, 66.1k Peak RAM, and 107.7K Flash during testing.
 
 
-## Power Consumption:
+## Power Consumption
 
 To measure power consumption, we used the following tools: RIGOL DS1102E oscilloscope, HP974A multimeter, and a TENMA 72-6628 power supply.
 The power supply was set to around 7.5V (measured voltage of 7.44V with 120-160 mV peak-to-peak), and was connected to the input voltage pin of the Arduino Nano. The oscilloscope was set to 1V/div and time scale of 1ms/div throughout each of the cases to ensure consistency in measurements. 
