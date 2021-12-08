@@ -154,6 +154,7 @@ We also found that the current contamination of the USB connection from the comp
 
 # 5. Discussion and Conclusions
 From the data that we collected, we were able to make some conclusions:
+
 We found that reducing image transmissions by eliminating redundancies does not reduce power consumption significantly in a 2-camera system.
 * The image transmission portion of the program required around the same amount of current as the image classification portion of the program (27 mA compared to 28 mA). The image taking portion of the program took around 1 s, while the classification portion took around 330 ms. 
 * Practical application:
@@ -164,13 +165,16 @@ We found that reducing image transmissions by eliminating redundancies does not 
 * The energy consumed while transmitting an image (29 mA) is only 3 mA more than when the system is in its delay state (26 mA).
 	* The image transmission time is 320 ms, so the energy saved is (0.32/3600) hours * 3 mA = 0.267 mAh saved per frame.
 	* This is 1.98/267 = 0.0074, or **0.74% energy conservation**.
+
 Reducing image transmissions by eliminating redundancies does not yield significant energy savings such that it compensates for power consumption of BLE communication.
 * In Case 3, we found that the average power consumption of the device with Bluetooth was increased by around 2 mA compared to the device without Bluetooth. We found that power consumption increased throughout the entire duration of the program uniformly. This is due to the fact that when Bluetooth is used with the central device, it is constantly advertising values of the “eventImageCharacteristic” so that the peripheral device can receive it. For this reason, using Bluetooth increased the power consumption of the device.
 * The power consumption of Bluetooth can be estimated as follows:
 * BLE energy per frame = 2 mA * (4.65/3600 hours) = 2.58 mAh
 * So, the energy consumed by utilizing Bluetooth communication (2.58 mAh per frame) was actually much higher than the energy saved by eliminating redundant image transmissions (0.267 mAh per frame). 
+
 Image classification & image transmission have similar power consumption (27-28 mA)
 * We found that image classification and image transmission had similar amounts of current draw, with only a difference of about 1 mA. In general, most of the operations of the program had current consumption in the high 20s of mA, with the exception of when the device was looking for another device to connect to via Bluetooth, where it only used about 10 mA. Surprisingly, even the delay state of the Arduino consumed current around 26 mA, even while intensive processes were not being executed.
+
 Taking photos/inferencing results in highest current spike (31-32 mA)
 * Perhaps not surprisingly, the highest current that we measured was during the “taking photos/inferencing” stage in Case 2. It makes sense that the highest power consumption would be during a processor-intensive operation such as taking a photo and classifying the image based on a machine learning model, as there are many calculations to be completed.
 
