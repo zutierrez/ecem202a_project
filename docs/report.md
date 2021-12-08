@@ -1,11 +1,11 @@
 # Table of Contents
-* [Abstract] (#1-abstract)
-* [Introduction](#2-introduction)
-* [Related Work](#3-related-work)
-* [Technical Approach](#4-technical-approach)
-* [Evaluation and Results](#5-evaluation-and-results)
-* [Discussion and Conclusions](#6-discussion-and-conclusions)
-* [References](#7-references)
+* Abstract
+* [Introduction](#1-introduction)
+* [Related Work](#2-related-work)
+* [Technical Approach](#3-technical-approach)
+* [Evaluation and Results](#4-evaluation-and-results)
+* [Discussion and Conclusions](#5-discussion-and-conclusions)
+* [References](#6-references)
 
 # Abstract
 
