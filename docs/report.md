@@ -163,7 +163,7 @@ We found that reducing image transmissions by eliminating redundancies does not 
 		* This is calculated using data from Case 1, which had the most consistent readings. Taking an image took 27 mA, image classification took 28 mA. From Case 3, we found that image transmission took 27 mA. Then, in Case 2, we found that BLE increased power consumption by about 2 mA, so this was also accounted for by adding to each current. 
 * The energy consumed while transmitting an image (29 mA) is only 3 mA more than when the system is in its delay state (26 mA).
 	* The image transmission time is 320 ms, so the energy saved is (0.32/3600 hours) * 3 mA = 0.267 mAh saved per frame.
-	* This is 1.98/267 = 0.0074, or **0.74% energy conservation**.
+	* This is 0.267/35.9 = 0.0074, or **0.74% energy conservation**.
 
 Reducing image transmissions by eliminating redundancies does not yield significant energy savings such that it compensates for power consumption of BLE communication.
 * In Case 3, we found that the average power consumption of the device with Bluetooth was increased by around 2 mA compared to the device without Bluetooth. We found that power consumption increased throughout the entire duration of the program uniformly. This is due to the fact that when Bluetooth is used with the central device, it is constantly advertising values of the “eventImageCharacteristic” so that the peripheral device can receive it. For this reason, using Bluetooth increased the power consumption of the device.
