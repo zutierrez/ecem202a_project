@@ -59,6 +59,8 @@ Our approach is to leverage the energy-efficient event camera computing approach
 * ArduCam OV7670 0.3 MP Camera Module (Low-Quality Image Sensor) x2
 * WiFi Connected Device
 
+### image (slide 9 hardware diagram)
+
 ## Software Implementation 
 By order of execution in implementation:
 * **BLE 5 Cross-Camera Communication Setup:** Advertising Central and Peripheral devices to establish connection and knowledge sharing via event image characteristics
