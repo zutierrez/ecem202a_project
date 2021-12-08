@@ -139,12 +139,12 @@ The 4 cases are as follows:
 **Case 3**: Images Transmission from Arduino to WiFi Device Program
 * In this case, we measured the current consumption of the device when it transmitted the binary data of an image to the computer. We found that the idle, taking photo, and transmitting photo currents were around 25 mA, 29 mA and 27 mA, respectively. 
 
-|   |         Task         | Min Current | Max Current | Avg. Current | Avg. Power |
-|:-:|:--------------------:|:-----------:|:-----------:|:------------:|:----------:|
-| 0 |     Bare Minimum     |      -      |      -      |     9 mA     |   67.5 mW  |
-| 1 |    Classification    |   24.3 mA   |   27.8 mA   |     26 mA    |   195 mW   |
-| 2 | Classification + BLE |    10 mA    |    32 mA    |     28 mA    |   210 mW   |
-| 3 |  Image Transmission  |      -      |      -      |     27 mA    |  202.5 mW  |
+| Case |         Task         | Min Current | Max Current | Avg. Current | Avg. Power |
+|:----:|:--------------------:|:-----------:|:-----------:|:------------:|:----------:|
+|   0  |     Bare Minimum     |      -      |      -      |     9 mA     |   67.5 mW  |
+|   1  |    Classification    |   24.3 mA   |   27.8 mA   |     26 mA    |   195 mW   |
+|   2  | Classification + BLE |    10 mA    |    32 mA    |     28 mA    |   210 mW   |
+|   3  |  Image Transmission  |      -      |      -      |     27 mA    |  202.5 mW  |
 
 In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
 
