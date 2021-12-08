@@ -37,8 +37,6 @@ Power consumption:
 To measure power consumption, we used the following tools: RIGOL DS1102E oscilloscope, HP974A multimeter, and a TENMA 72-6628 power supply.
 The power supply was set to around 7.5V (measured voltage of 7.44V with 120-160 mV peak-to-peak), and was connected to the input voltage pin of the Arduino Nano. The oscilloscope was set to 1V/div and time scale of 1ms/div throughout each of the cases to ensure consistency in measurements. 
 ![IMG_4076](https://user-images.githubusercontent.com/6758294/145184204-ac397acc-4c08-41bf-a362-8e72bd23cdf2.JPG)
-![IMG_4075](https://user-images.githubusercontent.com/6758294/145184276-ef65f2e1-970c-4f89-8a42-0624cb7f0f15.JPG)
-![IMG_4077](https://user-images.githubusercontent.com/6758294/145184290-3a334aa5-43e1-46ce-b60a-60e217f452bc.JPG)
 
 We initially attempted to measure the current by using a small sense resistor and measuring the voltage across the resistor differentially. However, the oscilloscope was not able to provide accurate readings at values on the order of mV, so we decided to use a multimeter instead. Unfortunately, since we were not able to use the scope to measure current, we were not able to obtain graphs of the current over time.
 
