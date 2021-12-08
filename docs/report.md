@@ -34,8 +34,10 @@ While the first method proved to be effective in reducing the power consumption 
 
 # 4. Evaluation and Results
 Power consumption:
+
 To measure power consumption, we used the following tools: RIGOL DS1102E oscilloscope, HP974A multimeter, and a TENMA 72-6628 power supply.
 The power supply was set to around 7.5V (measured voltage of 7.44V with 120-160 mV peak-to-peak), and was connected to the input voltage pin of the Arduino Nano. The oscilloscope was set to 1V/div and time scale of 1ms/div throughout each of the cases to ensure consistency in measurements. 
+
 ![IMG_4076](https://user-images.githubusercontent.com/6758294/145184204-ac397acc-4c08-41bf-a362-8e72bd23cdf2.JPG)
 
 We initially attempted to measure the current by using a small sense resistor and measuring the voltage across the resistor differentially. However, the oscilloscope was not able to provide accurate readings at values on the order of mV, so we decided to use a multimeter instead. Unfortunately, since we were not able to use the scope to measure current, we were not able to obtain graphs of the current over time.
@@ -50,13 +52,12 @@ The 4 cases were as follows:
     * We also tried the “Blink” program, which is provided as an example program from the official Arduino documentation. This program simply blinks an onboard LED on and off at a set interval. With this program, the current draw was 17.38 mA when the LED was off and 19.88 mA when the LED was on. We also tried plugging the Arduino into the computer via USB cable to find the current draw when both the power supply & the computer supply were connected to the device. We found that the current draw was 17.36 mA when the LED was on and 19.83 mA when the LED was off. So, we concluded that the contribution of the USB power source was negligible (<0.1 mA).
 * **Case 1**: Image Classification program
     * The Arduino was loaded with the image classification program from Edge Impulse. The image classification program can be described with the following flow: Take photo, inference (classify) the label, and delay for 2 seconds. By monitoring the multimeter, we found that the current draw for each of these stages was 26.8mA, 27.8mA, and 24.3mA, respectively. The first 2 stages took around 2 seconds combined.
+    * <img width="960" alt="Screen Shot 2021-12-08 at 1 45 36 AM" src="https://user-images.githubusercontent.com/6758294/145186359-9df3f4b3-ef51-4e6c-ae54-b17110dc3d15.png">
     * We also used the “Average” function of the multimeter, which averages the most recent 8 measurements. For further clarification, 2-4 measurements are taken each second by the multimeter. We found that the average current consumption of the device with the image classification program was around 26 mA.
-    * ![case1](https://user-images.githubusercontent.com/6758294/145184659-5b664ed7-b694-432c-b99d-f300ec5a5615.png)
-
     * We took the same current measurements with the USB power not into the Arduino, and found that the average current draw was decreased by around 0.2 mA - again, we considered this amount to be negligible, since it was less than 1% of the average current draw.
 * **Case 2**: Classification + Bluetooth communication
     * In this program, the Arduino searches for a peripheral device to connect to over Bluetooth, and only classifies images once it has found and connected to another device. The general flow is as follows: searching for a peripheral device, connect, delay, take photo & inference, disconnect. The cycle then repeats. The instantaneous current draw of the device for each of these stages was 13.3 mA, 10.3 mA, 28-29 mA, 31-32 mA, and 20-21 mA, respectively. 
-    * ![case2](https://user-images.githubusercontent.com/6758294/145184682-4be1cba1-5a38-4f54-ba98-73b568e3679d.png)
+    * <img width="893" alt="Screen Shot 2021-12-08 at 1 44 32 AM" src="https://user-images.githubusercontent.com/6758294/145186452-b0918fc0-9a3f-478f-9728-c5a83dcf814e.png">
     * We found the average current of the device in two separate conditions. When the device was not connected, the average current was 13.3 mA. When the device was connected, the average current was 28 mA.
 
 * **Case 3**: Image Transmission
@@ -71,8 +72,8 @@ The 4 cases were as follows:
 | 3    |  Image Transmission  |      27 mA      |     N/A     |     N/A     |
 
 
-* In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
-* In summary, we found that the current consumption of the Arduino varied with different loads and different stages in the programs. The highest current was found when the Arduino was executing the Classification + BT program, specifically in the “taking photo” stage at 31-32 mA. 
+In all cases, the measured voltage of the Vin pin of the Arduino was found to be 7.44V, with a peak-to-peak voltage of 120-160 mV. 
+In summary, we found that the current consumption of the Arduino varied with different loads and different stages in the programs. The highest current was found when the Arduino was executing the Classification + BT program, specifically in the “taking photo” stage at 31-32 mA. 
 We also found that the current contamination of the USB connection from the computer was negligible, at less than 1% of the total average current consumption in all cases. 
 
 
