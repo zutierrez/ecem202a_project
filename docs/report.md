@@ -179,7 +179,7 @@ Taking photos/inferencing results in highest current spike (31-32 mA)
 
 ## Future Steps
 * Develop overlapping field-of-view algorithm
-    * Although we did not have time to pursue this idea, it may be an interesting way to further optimize the device for power consumption.
+    * Although we did not have time to pursue this idea, it may be an interesting way to further optimize the device for power consumption
 * Optimize compatibility of microcontroller and camera module for image processing and data transmission
     * Perhaps using a different edge-computing device such as the Raspberry Pi instead of the Arduino would be a more effective strategy. Also, it may be possible to find a better camera sensor that is more reliable than the OV2640 or the OV7670
 * Enable finer granularity for on-board image classification (black dog versus white dog)
