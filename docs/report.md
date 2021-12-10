@@ -29,13 +29,13 @@ With an increased interest in event cameras and energy-efficient edge computing 
 
 ## Challenges
 There were many challenges with this project:
-* Extremely heavy computational requirements for MobileNet V2 TF Lite image classification models. Even after reduction of layers when migrating to MobileNet V1, Arduino Nano 33 BLE Sense would frequently reach memory limitations when BLE capabilities were added. Compilation times were also massively increased due to the size of the TF Lite models.
-* Major issues of BLE 5 for the Arduino Nano 33 BLE Sense include time synchronization, bandwidth limitations, speed of transfer and throughput bottlenecks. 
-   * Established connections between BLE devices in the network frequently lapsed and disconnects became more frequency when memory resources became restricted during inference in real-time.
-   * Bandwidth restrictions of BLE 5 disallowed the transmission of images via Bluetooth Low Energy; therefore, adjustments in system design were required to instead transfer labels for knowledge sharing between Arduino Nano devices.
-   * Alternate methods such as image buffer chunking or image compression would further increase computational load on the edge device which made these approaches undesirable from a power saving perspective.
-* Event camera modules and incompatibility with our resource constrained platform, Arduino Nano 33 BLE Sense. The initial technical approach involved transmission of 2MP images via the OV2640 camera module; however, image size and computational restrictions of the Arduino Nano made this camera unviable for the project.
-* Limitations of OV7670 Camera. After making the pivot from the OV2640, the project made a tradeoff between compute and image quality. Lower resolution images from the OV7670 made classifications less optimal than initially expected but allowed the project to move along to further evaluation steps. OV7670 also faced unexpected connectivity issues and would sporadically yield blurry or misaligned images after processing. 
+* Extremely heavy computational requirements for MobileNet V2 TF Lite image classification models. Even after reduction of layers when migrating to MobileNet V1, Arduino Nano 33 BLE Sense would frequently reach memory limitations when BLE capabilities were added. Compilation times were also massively increased due to the size of the TF Lite models
+* Major issues of BLE 5 for the Arduino Nano 33 BLE Sense include time synchronization, bandwidth limitations, speed of transfer and throughput bottlenecks
+   * Established connections between BLE devices in the network frequently lapsed and disconnects became more frequency when memory resources became restricted during inference in real-time
+   * Bandwidth restrictions of BLE 5 disallowed the transmission of images via Bluetooth Low Energy; therefore, adjustments in system design were required to instead transfer labels for knowledge sharing between Arduino Nano devices
+   * Alternate methods such as image buffer chunking or image compression would further increase computational load on the edge device which made these approaches undesirable from a power saving perspective
+* Event camera modules and incompatibility with our resource constrained platform, Arduino Nano 33 BLE Sense. The initial technical approach involved transmission of 2MP images via the OV2640 camera module; however, image size and computational restrictions of the Arduino Nano made this camera unviable for the project
+* Limitations of OV7670 Camera. After making the pivot from the OV2640, the project made a tradeoff between compute and image quality. Lower resolution images from the OV7670 made classifications less optimal than initially expected but allowed the project to move along to further evaluation steps. OV7670 also faced unexpected connectivity issues and would sporadically yield blurry or misaligned images after processing
 
 ## Requirements for Success
 Firmware/low-level software debugging and hardware testing skills are necessary to implement the onboard camera system. Furthermore, the team must have knowledge of image classification models and deployment of these models at the edge to successfully implement the project. Lastly, resources required for this project include Edge Impulse or TF Lite Micro for deploying DNNs, ArduCAM software documentation for camera hardware debugging and Microsoft Azure/AWS resources for storing images with a cloud service.
@@ -79,7 +79,7 @@ Training datasets used for this project primarily focus on images of human faces
 ### ![slide7ds](https://user-images.githubusercontent.com/6758294/145258243-145ab68a-295d-4de9-9d2a-5a98425728f7.PNG)
 
 
-**Image Processing:** 128x128 database images were cropped and resized to 96x96 and were also rotated and flipped in random order to improved robustness of MobileNet V1 during test time.
+**Image Processing:** 128x128 database images were cropped and resized to 96x96 and were also rotated and flipped in random order to improved robustness of MobileNet V1 during test time
 
 ### ![slide7ip](https://user-images.githubusercontent.com/6758294/145258080-6d904dde-617f-4167-b1b5-d10743e7fa46.PNG)
 
@@ -181,13 +181,13 @@ Taking photos/inferencing results in highest current spike (31-32 mA)
 * Develop overlapping field-of-view algorithm
     * Although we did not have time to pursue this idea, it may be an interesting way to further optimize the device for power consumption.
 * Optimize compatibility of microcontroller and camera module for image processing and data transmission
-    * Perhaps using a different edge-computing device such as the Raspberry Pi instead of the Arduino would be a more effective strategy. Also, it may be possible to find a better camera sensor that is more reliable than the OV2640 or the OV7670.
+    * Perhaps using a different edge-computing device such as the Raspberry Pi instead of the Arduino would be a more effective strategy. Also, it may be possible to find a better camera sensor that is more reliable than the OV2640 or the OV7670
 * Enable finer granularity for on-board image classification (black dog versus white dog)
-    * In future projects, higher granularity could be used to further cater towards specific applications, such as a security system.
+    * In future projects, higher granularity could be used to further cater towards specific applications, such as a security system
 * Improve latency and throughput by optimizing neural network architecture while maintaining low power consumption
-    * Latency and throughput could possibly be improved by utilizing strategies such as image downsampling - by reducing time spent doing power-expensive operations such as image transmitting and classifications, power consumption could be further improved.
+    * Latency and throughput could possibly be improved by utilizing strategies such as image downsampling - by reducing time spent doing power-expensive operations such as image transmitting and classifications, power consumption could be further improved
 * Analyze power consumption with portable power supply (battery) in real-life case study
-    * It would be interesting to see how these techniques of frequency reduction and redundant frame transmission canceling would perform in a real-life embedded system such as a security camera system running on batteries.
+    * It would be interesting to see how these techniques of frequency reduction and redundant frame transmission canceling would perform in a real-life embedded system such as a security camera system running on batteries
 
 
 # 6. References
