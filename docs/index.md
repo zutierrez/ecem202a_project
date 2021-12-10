@@ -9,7 +9,7 @@ With recent advances in edge computing, networks of IoT devices have become more
 * Zion Gutierrez
 * Sung Yoon Jung
 
-# Project Links (Required Submissions):
+# Project Links:
 
 * [Proposal](proposal)
 * [Midterm Checkpoint Presentation Slides](https://drive.google.com/file/d/1NG_EpbGneMs1bPng-Vq78oSfO0HGGdVe/view?usp=sharing)
