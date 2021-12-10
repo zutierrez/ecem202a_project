@@ -119,7 +119,7 @@ We decided to use an input voltage of 7.5V. This is because we needed to ensure 
 
 Since the system was not capable of completing the entire process flow of capturing an image, classifying it, communicating with the other device to check for redundant labels, and sending it to the computer, we decided to break up the steps into 4 cases. Then, we could deduce the power consumption of each stage separately and extrapolate our results to infer the power consumption optimizations that would be caused by our system improvements.
 
-The 4 cases considered are as follows:
+The 4 cases considered are the following:
 
 **Case 0**: "Reset" Arduino Program
 * The Arduino was reset using the physical reset button, which represented a totally empty program. Once reset, we measured the current draw of the device, which was around 9 mA. 
